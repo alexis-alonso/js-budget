@@ -2,12 +2,10 @@
 document.body.addEventListener('click', buttonClick);
 
 function buttonClick(e) {
-    if(e.target.classList.contains('btn-success')) {
-        console.log('you are about to save $!');
-    } 
-    else if(e.target.classList.contains('btn-danger')) {
+    if(e.target.classList.contains('btn-primary')) {
         console.log('you are about to lose $!');
-    }
+    } 
+    
 }
 
 

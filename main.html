@@ -8,7 +8,7 @@
     <!-- CSS only, bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <title>Friendly Neighborhood Budget App</title>
+    <title>Friendly Neighborhood Budget</title>
 </head>
 <body>
     
@@ -26,25 +26,34 @@
             <div class="col-3">
                 
                 <!-- here, this is where they can set a 'credit/debit' via highlighted radio button -->
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-
-                    <button type="button" class="btn btn-success m-3" for="saved-button" id="saved-button">Saved</button>
+                <!-- <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 
                     <button type="button" class="btn btn-danger m-3" for="spent-button" id="spent-button">Spent</button>
 
 
-                </div>
+                </div> -->
 
 
                 <!-- this allows users to input amount -->
+                <h3>How Much Did You Spend?</h3>
+
                 <div class="input-group m-3">
-                    <span class="input-group-text">$</span>
+                    
 
                     <!-- here is the input form -->
-                    <input type="text" class="form-control m-3" name="money" id="user-input" placeholder="Enter amount">
+                    <div class="input-group mb-3">
 
-                    <button type="button" class="btn btn-primary btn-sm" id="myBtn" onclick="PrintUserInput()">Submit</button>
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" name='money' id='user-input' placeholder="Enter amount" aria-label="Amount (to the nearest dollar)">
+                        
+                        <button type="button" class="btn btn-primary btn-sm" id="myBtn" onclick="PrintUserInput()">Submit</button>
+
+                    </div>
+                      
+                  
                 </div>
+
+                
                 
             </div>
 

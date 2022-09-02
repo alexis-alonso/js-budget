@@ -31,17 +31,31 @@
                     
 
                     <!-- here is the input form -->
-                    <div class="input-group mb-3">
-
-                        <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" name='money' id='user-input' placeholder="Enter amount" aria-label="Amount (to the nearest dollar)">
+                    <div class="form-content">
+                        <span class="form-title">Entry</span>
                         
-                        <button type="button" class="btn btn-primary btn-sm" id="myBtn" onclick="PrintUserInput()">Submit</button>
+                        <div class="row">
+                          <form id="entry-form">
+                            <div class="input-field">
+                                <input type="text" name="amount" id="amount" placeholder="New Amount">
+                                <input type="submit" value="Submit" class="btn">
+                            </div>
 
+                            <div class="input-field">
+                                <input type="text" name="description" id="description" placeholder="Description">
+                                <input type="submit" value="Submit" class="btn">
+                            </div>
+                            
+                          </form>
+                        
+                        </div>
+                    
                     </div>
                       
                   
                 </div>
+
+                
                 
                 <div class="mt-5">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/aKn0HddzuWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -54,9 +68,14 @@
             </div>
 
             <div class="col-9">
-                <div>Summary</div>
+                <h3>Summary</h3>
 
-                <div id="summary"></div>
+                <div id="summary">
+                    <ul class="summary"></ul>
+                
+                </div>
+
+                <div>Total Spent: </div>
 
             </div>
         </div>
@@ -73,7 +92,7 @@
             document.getElementById("myBtn").click();
           }
         });
-        </script>
+    </script>
 
     <script src="script.js"></script>
 </body>

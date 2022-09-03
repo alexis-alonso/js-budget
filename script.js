@@ -2,6 +2,7 @@
 const form = document.querySelector('#entry-form');
 const summary = document.querySelector('.summary');
 const amountInput = document.querySelector("#amount");
+const describe = document.querySelector("#description");
 
 loadEventListeners();
 
@@ -10,10 +11,16 @@ function loadEventListeners() {
 
 };
 
-function addEntry(e) {
+function addEntry(e, f) {
     if(amountInput.value === "") {
         alert('You have got to be kidding me!');
-    } else {
+    } 
+    
+    else if (isNaN(amountInput.value)) {
+        alert ('Please enter a number!');
+    }
+    
+    else {
         // Creates li element to print on Summary side
         const li = document.createElement('li');
 
@@ -27,45 +34,28 @@ function addEntry(e) {
         summary.appendChild(li);
         
         amountInput.value = '';
-            
 
+
+        // // Creates second li element to print on Summary side
+        // const li2 = document.createElement('li');
+
+        // // Create text node to attach/append to created li element
+        // li2.appendChild(document.createTextNode(describe.value));
+
+        // // Print/append to Summary side col
+        // summary.appendChild(li2);
+        
+        // describe.value = '';
+            
     }
 
 
     e.preventDefault();
+    f.preventDefault();
 }; 
     
 
-// document.body.addEventListener('click', buttonClick);
 
-// function buttonClick(e) {
-//     if(e.target.classList.contains('btn-primary')) {
-//         console.log('you are about to lose $!');
-//     } 
-    
-// }
-
-
-
-
-
-// function printAmount() {
-
-//     // here, we want js to print based on what we put in input text (see input-group)
-//     // then, we want js to print based on what radio button is 'active'
-
-//     // this code let the screen now print what was in the input field
-//     let money = document.getElementById('user-input').value;
-//     var find_var = document.getElementById('summary');
-//     find_var.innerHTML = money;
-
-//     var tag = document.createElement("p");
-//     var text = document.createTextNode(find_var.innerHTML)
-//     tag.appendChild(text);
-//     // var element = document.getElementById('summary');
-//     find_var.appendChild(tag);
-
-// }
 
 // function enterFloat(num){
 
@@ -82,20 +72,3 @@ function addEntry(e) {
 
 
 // };
-
-
-function resetInput(){
-
-    // reset the input to empty
-   document.getElementById("user-input").value = "";
-
-}
-
-// function PrintUserInput(){
-    
-//     printAmount(enterFloat())
-
-    
-//     resetInput();
-
-// }
